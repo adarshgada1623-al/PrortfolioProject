@@ -51,27 +51,6 @@ CREATE TABLE CovidVaccinations (
     human_development_index TEXT
 );
 
-RENAME TABLE coviddeaths_final TO coviddeath;
-
-ALTER TABLE coviddeath
-MODIFY COLUMN total_deaths DOUBLE,
-MODIFY COLUMN new_deaths DOUBLE,
-MODIFY COLUMN new_deaths_smoothed DOUBLE,
-MODIFY COLUMN total_cases_per_million DOUBLE,
-MODIFY COLUMN new_cases_per_million DOUBLE,
-MODIFY COLUMN new_cases_smoothed_per_million DOUBLE,
-MODIFY COLUMN total_deaths_per_million DOUBLE,
-MODIFY COLUMN new_deaths_per_million DOUBLE,
-MODIFY COLUMN new_deaths_smoothed_per_million DOUBLE,
-MODIFY COLUMN reproduction_rate DOUBLE,
-MODIFY COLUMN icu_patients DOUBLE,
-MODIFY COLUMN icu_patients_per_million DOUBLE,
-MODIFY COLUMN hosp_patients DOUBLE,
-MODIFY COLUMN hosp_patients_per_million DOUBLE,
-MODIFY COLUMN weekly_icu_admissions DOUBLE,
-MODIFY COLUMN weekly_icu_admissions_per_million DOUBLE,
-MODIFY COLUMN weekly_hosp_admissions DOUBLE,
-MODIFY COLUMN weekly_hosp_admissions_per_million DOUBLE;
 
 UPDATE  covidvaccinations
 SET human_development_index = null
